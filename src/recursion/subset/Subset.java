@@ -68,34 +68,7 @@ public class Subset {
         return outer;
     }
 
-    /**
-     * 1. when you find a duplicate element, only add the element in the previously created subset
-     * 2. because of above point, duplicates have to be adjacent. - so array needs to be sorted.
-     */
 
-    public static List<List<Integer>> subsetIterativeForDuplicates(int[] arr){
-        //iterative implementation to find subset in an array
-
-        // this is the final list
-        ArrayList<List<Integer>> outer= new ArrayList<>();
-
-        // initialise the list with an empty list
-        outer.add(new ArrayList<>());
-
-        for(int nums:arr){
-            int size = outer.size();
-            // since the elements needs to be added in all existng list of answers
-            // loop runs for the size of outer
-            for(int i =0; i<size; i++){
-                // creating a copy of outer list on i
-                List<Integer> internal =  new ArrayList<>(outer.get(i));
-                internal.add(nums);
-                outer.add(internal);
-            }
-        }
-
-        return outer;
-    }
 
 
 }
