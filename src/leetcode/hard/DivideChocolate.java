@@ -1,4 +1,4 @@
-package google.hard;
+package leetcode.hard;
 
 public class DivideChocolate {
 

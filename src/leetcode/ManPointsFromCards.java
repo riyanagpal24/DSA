@@ -1,4 +1,4 @@
-package google;
+package leetcode;
 
 /**
  * https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/

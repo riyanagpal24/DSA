@@ -16,7 +16,7 @@ public class SubSeqString {
             System.out.println(p);
             return;
         }
-        Character ch = up.charAt(0);
+        Character ch = (Character) up.charAt(0);
         subSeq(p + ch, up.substring(1));
         subSeq(p, up.substring(1));
     }
@@ -26,7 +26,7 @@ public class SubSeqString {
             arr.add(p);
             return arr;
         } else {
-            Character ch = up.charAt(0);
+            Character ch = (Character) up.charAt(0);
             // substring is creating a new variable - string is immutable
             // so this does not update the up string
             subSeqInArray(p + ch, up.substring(1), arr);
@@ -42,7 +42,7 @@ public class SubSeqString {
             return sub;
         }
 
-        Character ch = up.charAt(0);
+        Character ch = (Character) up.charAt(0);
         // substring is creating a new variable - string is immutable
         // so this does not update the up string
 

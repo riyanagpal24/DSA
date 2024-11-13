@@ -51,7 +51,7 @@ public class Subset {
          */
         for(int nums:arr){
             int size = outer.size();
-            // since the elements needs to be added in all existng list of answers
+            // since the elements needs to be added in all existing list of answers
             // loop runs for the size of outer
            for(int i =0; i<size; i++){
                // creating a copy of outer list on i
