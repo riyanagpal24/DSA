@@ -99,5 +99,76 @@ public class BST {
         }
     }
 
+    public boolean balanced() {
+        return balanced(root);
+    }
+
+    private boolean balanced(Node node) {
+        if (node == null) {
+            return true;
+        }
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
+    }
+
+    public void preOrder(){
+        if(root == null){
+            System.out.println("The tree is empty");
+            return;
+        }
+        System.out.print("PreOrder: ");
+        preOrder(root);
+        System.out.println("END");
+    }
+
+    private void preOrder(Node root){
+        if(root == null){
+            return;
+        }
+
+        System.out.print(" " +root.val + "---->");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+
+    public void postOrder(){
+        if(root == null){
+            System.out.println("The tree is empty");
+            return;
+        }
+        System.out.print("PostOrder:");
+        postOrder(root);
+        System.out.println("END");
+    }
+
+    private void postOrder(Node root){
+        if(root == null){
+            return;
+        }
+
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(" " +root.val + "---->");
+    }
+
+    public void inOrder(){
+        if(root == null){
+            System.out.println("The tree is empty");
+            return;
+        }
+        System.out.print("InOrder:");
+        inOrder(root);
+        System.out.println("END");
+    }
+
+    private void inOrder(Node root){
+        if(root == null){
+            return;
+        }
+
+        inOrder(root.left);
+        System.out.print(" " +root.val + "---->");
+        inOrder(root.right);
+    }
 
 }
